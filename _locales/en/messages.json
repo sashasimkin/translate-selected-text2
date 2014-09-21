@@ -1,0 +1,60 @@
+{
+	"app_name": {
+		"message": "Translate Selected Text 2",
+		"description": "The app name"
+	},
+	"app_description": {
+		"message": "Translate selected text with Google Translator",
+		"description": "The app description"
+	},
+	"contextMenu_title": {
+		"message": "Translate selection into...",
+		"description": "Title of the context menu that appears when a right click is done. Inside this parent menu there are the menus"
+	},
+	"contextMenu_edit": {
+		"message": "Edit languages...",
+		"description": "Title of the option inside the 'Translate section into...' context menu."
+	},
+	"options_welcome": {
+		"message": "Welcome!",
+		"description": "Title of the options page"
+	},
+	"options_introduction": {
+		"message": "Drag & drop the languages you want to show up in the \"translate\" menu from the \"Languages\" to the \"Selected languages\" list (You can sort your languages inside the \"Selected languages\" menu and changes will be reflected in context menu). If you want to remove a language from menu, just drop it back into \"Languages\". Don't forget to press \"Save settings\" in the right-top corner. :)",
+		"description": "Introduction paragraph to the languages selection"
+	},
+	"options_languagesSelectHeader": {
+		"message": "Languages:",
+		"description": "Header of the language select option."
+	},
+  "options_languagesSelectedHeader": {
+    "message": "Selected languages:",
+    "description": "Header of the language selected option."
+  },
+	"options_commonOptionsHeader": {
+		"message": "Common options:",
+		"description": "Header of the options page."
+	},
+	"options_translatorBehaviour_tab_new": {
+		"message": "Open Google Translator in a new tab for each translation.",
+		"description": "Option which defines how should the app behave in relation to tabs."
+	},
+	"options_translatorBehaviour_tab_replace": {
+		"message": "Open Google Translator in a unique tab and override the last translation instead of opening several tabs.",
+		"description": "Option which defines how should the app behave in relation to tabs."
+	},
+	"options_translatorBehaviour_panel": {
+		"message": "Open Google Translator in a panel (need to activate <a href='chrome://flags/#enable-panels' data-new-tab>--enable-panels</a> flag). <sup style='color:red; font-weight: bold;'>EXPERIMENTAL</sup>",
+		"description": "Option which defines how should the app behave in relation to tabs."
+	},
+	"options_saveButton": {
+		"message": "Save settings!",
+		"description": "Save button in the settings page"
+	},
+  "options_savedMessage": {
+    "message": "Settings saved!",
+    "description": "Saved notification text in the settings page"
+  },
+	"notification_installTitle": { "message": "Thanks for installing 'Translate Selected Text'" },
+	"notification_installMessage": { "message": "Click this notification to set it up." }
+}

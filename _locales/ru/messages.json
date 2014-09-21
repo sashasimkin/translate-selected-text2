@@ -1,0 +1,60 @@
+{
+  "app_name": {
+    "message": "Перевести выбранный текст 2",
+    "description": "The app name"
+  },
+  "app_description": {
+    "message": "Перевод выбранного текста с помощью Google Переводчика",
+    "description": "The app description"
+  },
+  "contextMenu_title": {
+    "message": "Перевести на...",
+    "description": "Title of the context menu that appears when a right click is done. Inside this parent menu there are the menus"
+  },
+  "contextMenu_edit": {
+    "message": "Настройки...",
+    "description": "Title of the option inside the 'Translate section into...' context menu."
+  },
+  "options_welcome": {
+    "message": "Добро пожаловать!",
+    "description": "Title of the options page"
+  },
+  "options_introduction": {
+    "message": "Перетащите языки, которые вы хотите видеть в контекстном меню из \"Доступные языки\" в \"Выбранные языки\" (Вы можете отсортировать порядок в котором языки будут показаны в контекстном меню в меню \"Выбранные языки\"). Если вы хотите убрать какой-то язык из контекстного меню перетащите его обратно из \"Доступные языки\" в \"Выбранные языки\". Не забудьте нажать \"Сохранить настройки\" в правом-верхнем углу страницы. :)",
+    "description": "Introduction paragraph to the languages selection"
+  },
+  "options_languagesSelectHeader": {
+    "message": "Доступные языки:",
+    "description": "Header of the language select option."
+  },
+  "options_languagesSelectedHeader": {
+    "message": "Выбранные языки:",
+    "description": "Header of the language selected option."
+  },
+  "options_commonOptionsHeader": {
+    "message": "Общие настройки:",
+    "description": "Header of the options page."
+  },
+  "options_translatorBehaviour_tab_new": {
+    "message": "Открывать вкладку Google Переводчика в новой вкладке для каждого перевода.",
+    "description": "Option which defines how should the app behave in relation to tabs."
+  },
+  "options_translatorBehaviour_tab_replace": {
+    "message": "Открывать Google Переводчик в одной вкладке, и перезаписывать предыдущие результаты, вместо открытия нескольких вкладок.",
+    "description": "Option which defines how should the app behave in relation to tabs."
+  },
+  "options_translatorBehaviour_panel": {
+    "message": "Открыть Google Переводчик в новой панели (<span style=\"color:red; font-weight: bold;\">нужно включить флаг <a href='chrome://flags/#enable-panels' data-new-tab>--enable-panels</a></span>).",
+    "description": "Option which defines how should the app behave in relation to tabs."
+  },
+  "options_saveButton": {
+    "message": "Сохранить настройки!",
+    "description": "Save button in the settings page"
+  },
+  "options_savedMessage": {
+    "message": "Настройки сохранены!",
+    "description": "Saved notification text in the settings page"
+  },
+  "notification_installTitle": { "message": "Спасибо за установку \"Перевести выбранный текст 2\"" },
+  "notification_installMessage": { "message": "Нажмите сюда чтобы настроить расширение." }
+}
