@@ -31,9 +31,9 @@
     "message": "Выбранные языки:",
     "description": "Header of the language selected option."
   },
-  "options_commonOptionsHeader": {
+  "options_behaviourOptionsHeader": {
     "message": "Общие настройки:",
-    "description": "Header of the options page."
+    "description": "Header of the behaviour options."
   },
   "options_translatorBehaviour_tab_new": {
     "message": "Открывать вкладку Google Переводчика в новой вкладке для каждого перевода.",

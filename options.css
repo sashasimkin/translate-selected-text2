@@ -1,9 +1,8 @@
 body {
-	padding:10px;
+	padding: 10px;
 	font-family:"Roboto", "Arial", sans-serif!important;
-	background-image: url('images/icon-1.png');
-	background-repeat: repeat;
-	background-position: left top;
+    font-size: 14px;
+    background-color: rgba(74, 175, 247, 0.19);
 }
 h1 {
 	text-align:center;
@@ -40,11 +39,14 @@ h2 {
     padding: 5px;
     font-size: 0.9em;
     width: 220px;
+
+    border-bottom: 1px solid #000;
 }
 
-#languages {
-	/*-webkit-column-count: 4;*/
+#languages li:last-child {
+    border-bottom: none;
 }
+
 button#save {
 	display:block;
 	margin:18px auto;

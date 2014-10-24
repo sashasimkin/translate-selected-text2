@@ -31,9 +31,9 @@
     "message": "Selected languages:",
     "description": "Header of the language selected option."
   },
-	"options_commonOptionsHeader": {
+	"options_behaviourOptionsHeader": {
 		"message": "Common options:",
-		"description": "Header of the options page."
+		"description": "Header of the behaviour options."
 	},
 	"options_translatorBehaviour_tab_new": {
 		"message": "Open Google Translator in a new tab for each translation.",

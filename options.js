@@ -46,7 +46,7 @@ function init() {
     '#introduction': 'options_introduction',
     '#languages-select-header': 'options_languagesSelectHeader',
     '#languages-selected-header': 'options_languagesSelectedHeader',
-    '#common-options-header': 'options_commonOptionsHeader',
+    '#behaviour-options-header': 'options_behaviourOptionsHeader',
     '#save': 'options_saveButton'
   });
 
