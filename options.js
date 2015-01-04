@@ -94,12 +94,18 @@ function init() {
       addLanguage(items.languages[i], '#selected-languages');
     }
 
-    $( "#languages, #selected-languages" ).sortable({
+    var $available = $( "#languages"),
+      $selected = $( "#selected-languages" );
+
+    $($available).add($selected).sortable({
       connectWith: ".ul-connected"
     }).disableSelection();
-
-    $('#selected-languages').height($('#languages').height());
+    // Make same height
+    $selected.height($available.height());
   });
+
+  $('[name="translatorBehaviour"]').on('change', save_options);
+  $('#selected-languages').on('sortstop sortreceive sortupdate', save_options);
 }
 
 function save_options() {

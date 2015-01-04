@@ -3,16 +3,20 @@
     "message": "Перевести выбранный текст 2",
     "description": "The app name"
   },
+  "app_short_name": {
+    "message": "Переводчик",
+    "description": "The app short name"
+  },
   "app_description": {
     "message": "Перевод выбранного текста с помощью Google Переводчика",
     "description": "The app description"
   },
   "contextMenu_title": {
-    "message": "Перевести на...",
+    "message": "Перевести на",
     "description": "Title of the context menu that appears when a right click is done. Inside this parent menu there are the menus"
   },
   "contextMenu_edit": {
-    "message": "Настройки...",
+    "message": "Настройки",
     "description": "Title of the option inside the 'Translate section into...' context menu."
   },
   "options_welcome": {

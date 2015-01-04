@@ -3,16 +3,20 @@
 		"message": "Translate Selected Text 2",
 		"description": "The app name"
 	},
+	"app_short_name": {
+	  "message": "Translator",
+	  "description": "The app short name"
+	},
 	"app_description": {
 		"message": "Translate selected text with Google Translator",
 		"description": "The app description"
 	},
 	"contextMenu_title": {
-		"message": "Translate selection into...",
+		"message": "Translate selection into",
 		"description": "Title of the context menu that appears when a right click is done. Inside this parent menu there are the menus"
 	},
 	"contextMenu_edit": {
-		"message": "Edit languages...",
+		"message": "Edit languages",
 		"description": "Title of the option inside the 'Translate section into...' context menu."
 	},
 	"options_welcome": {

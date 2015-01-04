@@ -69,26 +69,30 @@ function openOptionsPage(info, tab) {
 
 function createMenus(languages) {
   chrome.contextMenus.removeAll();
+  var langsLength = languages.length,
+    parent;
 
-  var parent = chrome.contextMenus.create({
-    "title": chrome.i18n.getMessage("contextMenu_title"),
-    "contexts": ["selection"],
-    "onclick": openTranslator
-  });
+  if (langsLength > 1) {
+    parent = chrome.contextMenus.create({
+      "title": chrome.i18n.getMessage("contextMenu_title"),
+      "contexts": ["selection"],
+      "onclick": openTranslator
+    });
+  }
 
   if (languages) {
-    for (var i=0; i < languages.length; i++) {
+    for (var i = 0; i < languages.length; i++) {
       var language = languages[i];
 
       var iso_lang = isoLanguages[language];
       var child_id = chrome.contextMenus.create({
-        "title": iso_lang.name + " (" + iso_lang.nativeName + ")",
+        "title": (langsLength == 1 ? chrome.i18n.getMessage("contextMenu_title") + ' ' : '') + iso_lang.name + " (" + iso_lang.nativeName + ")",
         "parentId": parent,
         "contexts": ["selection"],
         "onclick": openTranslator
       });
 
-      if(!lastUsedLanguageMenu) { // If this is first run - set first language as "last used"
+      if (!lastUsedLanguageMenu) { // If this is first run - set first language as "last used"
         lastUsedLanguageMenu = child_id;
       }
       activeMenus[child_id] = {
@@ -98,20 +102,22 @@ function createMenus(languages) {
       };
     }
 
-    chrome.contextMenus.create({
-      "type": "separator",
-      "parentId": parent,
-      "contexts": ["selection"],
-      "onclick": openOptionsPage
-    });
-  }
+    if (langsLength > 1) {
+      chrome.contextMenus.create({
+        "type": "separator",
+        "parentId": parent,
+        "contexts": ["selection"],
+        "onclick": openOptionsPage
+      });
 
-  chrome.contextMenus.create({
-    "title": chrome.i18n.getMessage("contextMenu_edit"),
-    "parentId": parent,
-    "contexts": ["selection"],
-    "onclick": openOptionsPage
-  });
+      chrome.contextMenus.create({
+        "title": chrome.i18n.getMessage("contextMenu_edit"),
+        "parentId": parent,
+        "contexts": ["selection"],
+        "onclick": openOptionsPage
+      });
+    }
+  }
 }
 
 // Maybe this must be realized as some sort of the popup
