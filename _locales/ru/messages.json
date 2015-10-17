@@ -24,7 +24,7 @@
     "description": "Title of the options page"
   },
   "options_introduction": {
-    "message": "Перетащите языки, которые вы хотите видеть в контекстном меню из \"Доступные языки\" в \"Выбранные языки\" (Вы можете отсортировать порядок в котором языки будут показаны в контекстном меню в меню \"Выбранные языки\"). Если вы хотите убрать какой-то язык из контекстного меню перетащите его обратно из \"Доступные языки\" в \"Выбранные языки\". Не забудьте нажать \"Сохранить настройки\" в правом-верхнем углу страницы. :)",
+    "message": "Перетащите языки, которые вы хотите видеть в контекстном меню из \"Доступные языки\" в \"Целевые языки\" (Вы можете отсортировать порядок в котором языки будут показаны в контекстном меню в меню \"Целевые языки\"). Если вы хотите убрать какой-то язык из контекстного меню перетащите его обратно из \"Доступные языки\" в \"Целевые языки\". Не забудьте нажать \"Сохранить настройки\" в правом-верхнем углу страницы. :)",
     "description": "Introduction paragraph to the languages selection"
   },
   "options_languagesSelectHeader": {
@@ -32,7 +32,7 @@
     "description": "Header of the language select option."
   },
   "options_languagesSelectedHeader": {
-    "message": "Выбранные языки:",
+    "message": "Целевые языки:",
     "description": "Header of the language selected option."
   },
   "options_behaviourOptionsHeader": {
@@ -48,12 +48,8 @@
     "description": "Option which defines how should the app behave in relation to tabs."
   },
   "options_translatorBehaviour_panel": {
-    "message": "Открыть Google Переводчик в новой панели (<span style=\"color:red; font-weight: bold;\">нужно включить флаг <a href='chrome://flags/#enable-panels' data-new-tab>--enable-panels</a></span>).",
+    "message": "Открыть Google Переводчик в новой панели (возможно нужно активировать флаг <a href='chrome://flags/#enable-panels' data-new-tab>--enable-panels</a>).",
     "description": "Option which defines how should the app behave in relation to tabs."
-  },
-  "options_saveButton": {
-    "message": "Сохранить настройки!",
-    "description": "Save button in the settings page"
   },
   "options_savedMessage": {
     "message": "Настройки сохранены!",

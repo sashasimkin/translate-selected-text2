@@ -11,4 +11,10 @@
       document.head.appendChild(style);
     }
   }
+
+  window.addEventListener('keyup', function (e) {
+    if(e.keyCode == 27) {
+      window.close();
+    }
+  });
 })();

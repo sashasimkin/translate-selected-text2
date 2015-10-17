@@ -40,7 +40,7 @@ function openTranslator(info, tab) {
       width: 1000,
       height: 382
     }, function (window) {
-      handleTranslatorOpened(window.tabs[0].id);
+      handleTranslatorOpened(window.tabs[0]);
     });
   } else { // At all it is a tabs_new case
     chrome.tabs.create(settingsTab, function (tab) {
@@ -134,7 +134,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
       if (isEmpty(items)) {
         var settings = {
             languages: [],
-            translatorBehaviour: 'tab_new' // Because this is the default behaviour
+            translatorBehaviour: 'panel' // Because this is the default behaviour
           },
           default_language = chrome.i18n.getMessage("@@ui_locale").split("_")[0];
 

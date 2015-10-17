@@ -15,18 +15,10 @@ function populateHtml(data) {
 
 function notify_saved() {
   var $save = $('#save');
-
-  populateHtml({
-    '#save': 'options_savedMessage'
-  });
-  $save.addClass('green');
+  $save.fadeIn();
 
   setTimeout(function () {
-    populateHtml({
-      '#save': 'options_saveButton'
-    });
-
-    $save.removeClass('green');
+    $save.fadeOut();
   }, 2000);
 }
 
@@ -47,7 +39,7 @@ function init() {
     '#languages-select-header': 'options_languagesSelectHeader',
     '#languages-selected-header': 'options_languagesSelectedHeader',
     '#behaviour-options-header': 'options_behaviourOptionsHeader',
-    '#save': 'options_saveButton'
+    '#save': 'options_savedMessage'
   });
 
   var behaviourOptions = ['tab_new', 'tab_replace', 'panel'],
@@ -81,8 +73,6 @@ function init() {
       chrome.tabs.create({url: this.href});
       e.preventDefault();
     });
-//    $("#panelsflag").on('click', function() { event.preventDefault(); chrome.tabs.create({url: 'chrome://flags/#enable-panels'}); });
-    $("#save").on('click', save_options);
 
     for (var language in isoLanguages) {
       if(!isoLanguages.hasOwnProperty(language)) continue;
@@ -103,7 +93,8 @@ function init() {
     // Make same height
     $selected.height($available.height());
   });
-
+  
+  // Link every change with options updater
   $('[name="translatorBehaviour"]').on('change', save_options);
   $('#selected-languages').on('sortstop sortreceive sortupdate', save_options);
 }
@@ -111,7 +102,7 @@ function init() {
 function save_options() {
   var options = {
     translatorBehaviour: $('[name="translatorBehaviour"]:checked').val(),
-    languages: $( "#selected-languages" ).sortable( "toArray" )
+    languages: $( "#selected-languages" ).sortable("toArray")
   };
 
   // Changes from this actions will be propagated to the background page by onChanged event
@@ -119,7 +110,7 @@ function save_options() {
     bgPage.translator_tab = false;
     bgPage.translator_window = false;
 
-    // Notify saved
+    // Notify user that settings are saved
     notify_saved();
   });
 }
