@@ -7,14 +7,9 @@
 
       var style = document.createElement("style");
       style.innerHTML = '#gb {display: none !important;} #gba {display: none !important;}' + // Hide header
-        '#gt-ft {display: none !important;} #gt-ft-res {display: none !important;}'; // Hide footer
+          '#gt-ft {display: none !important;} #gt-ft-res {display: none !important;}' + // Hide footer
+          '#gt-promo-lr {display: none !important;}'; // Hide promo. We don't need it in our pop-up
       document.head.appendChild(style);
     }
   }
-
-  window.addEventListener('keyup', function (e) {
-    if(e.keyCode == 27) {
-      window.close();
-    }
-  });
 })();

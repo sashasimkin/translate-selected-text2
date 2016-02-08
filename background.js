@@ -15,7 +15,7 @@ function handleTranslatorOpened(tab) {
    * Tweak Google Translate page by removing header and footer which is very handy when using panels
    */
   chrome.tabs.executeScript(tab.id, {
-    file: "page_tweak.js",
+    file: "content_scripts/tweak_translator.js",
     runAt: "document_start"
   });
 }
@@ -24,10 +24,10 @@ function openTranslator(info, tab) {
   lastUsedLanguageMenu = info.menuItemId;
 
   var translate_url = 'https://translate.google.com/#auto/' + activeMenus[info.menuItemId].langCode + '/' + encodeURIComponent(info.selectionText),
-    settingsTab = {'url': translate_url};
+    tabSettings = {'url': translate_url};
 
   if (translatorTab && translatorBehaviour === 'tab_replace') {
-    chrome.tabs.update(translatorTab, settingsTab, function (tab) {
+    chrome.tabs.update(translatorTab, tabSettings, function (tab) {
       chrome.tabs.highlight({'windowId': tab.windowId, 'tabs': tab.index}, function () {
         chrome.windows.update(tab.windowId, {focused: true}, function () {});
       });
@@ -43,7 +43,7 @@ function openTranslator(info, tab) {
       handleTranslatorOpened(window.tabs[0]);
     });
   } else { // At all it is a tabs_new case
-    chrome.tabs.create(settingsTab, function (tab) {
+    chrome.tabs.create(tabSettings, function (tab) {
       translatorWindow = tab.windowId;
       translatorTab = tab.id;
 
@@ -122,10 +122,12 @@ function createMenus(languages) {
 
 // Maybe this must be realized as some sort of the popup
 chrome.browserAction.onClicked.addListener(function(tab) {
-  openTranslator({
-    menuItemId: lastUsedLanguageMenu,
-    selectionText: ''
-  }, tab);
+  chrome.tabs.sendRequest(tab.id, {method: "getSelection"}, function(response){
+    openTranslator({
+      menuItemId: lastUsedLanguageMenu,
+      selectionText: (response && response.data) || ''
+    }, tab);
+  });
 });
 
 chrome.runtime.onInstalled.addListener(function(details) {
